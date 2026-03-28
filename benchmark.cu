@@ -221,10 +221,10 @@ __global__ void meowpow_v2_benchmark(
     for (int i = 0; i < 8; i++) kstate[i] = header_hash[i];
     kstate[8] = (uint32_t)nonce;
     kstate[9] = (uint32_t)(nonce >> 32);
-    // Meowcoin constants
+    // TariVision domain separation constants
     static const uint32_t meow_const[15] = {
-        0x4D,0x45,0x4F,0x57,0x43,0x4F,0x49,0x4E,
-        0x4D,0x45,0x4F,0x57,0x50,0x4F,0x57
+        0x54,0x41,0x52,0x49,0x56,0x49,0x53,0x49,
+        0x4F,0x4E,0x54,0x41,0x52,0x49,0x56
     };
     for (int i = 10; i < 25; i++) kstate[i] = meow_const[i-10];
     d_keccakf800(kstate);
